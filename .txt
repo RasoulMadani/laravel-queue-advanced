@@ -1,3 +1,6 @@
 php artisan --version
 
 php artisan migrate 
+
+php artisan queue:table
+php artisan migrate
