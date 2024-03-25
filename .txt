@@ -4,3 +4,5 @@ php artisan migrate
 
 php artisan queue:table
 php artisan migrate
+
+php artisan make:job ProcessVideo
