@@ -12,13 +12,15 @@ class RegisterController extends Controller
 {
     public function register()
     {
-        $validatedData = [
-            'name' => 'hesam',
-            'email' => 'hesam@gmail.com',
-            'password' => '12345678'
-        ];
 
-        $user = User::create($validatedData);
+        // $validatedData = [
+        //     'name' => 'hesam',
+        //     'email' => 'hesam@gmail.com',
+        //     'password' => '12345678'
+        // ];
+
+        // $user = User::create($validatedData);
+        $user = User::whereEmail('hesam@gmail.com')->first();
         SendVerificationEmailJob::dispatch($user);
         
 
