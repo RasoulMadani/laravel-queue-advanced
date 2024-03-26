@@ -16,3 +16,11 @@ php artisan make:mail SendVerificationEmail
 php artisan make:job SendVerificationEmailJob
 
 php artisan queue:work
+
+اجرای یک صف
+php artisan queue:work --queue=sending-notification
+
+اجرای چند صف مختلف با یک دستور
+php artisan queue:work --queue=default,sending-notification
+
+php artisan queue:work --help
