@@ -8,3 +8,7 @@ php artisan migrate
 php artisan make:job ProcessVideo
 
 php artisan queue:work
+
+php artisan make:controller RegisterController
+
+php artisan make:mail SendVerificationEmail

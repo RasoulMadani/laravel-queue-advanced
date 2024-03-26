@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use App\Jobs\ProcessVideo;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,6 @@ Route::get('/', function () {
     ProcessVideo::dispatch();
     return 'done josb';
 });
+
+
+Route::post('register', [RegisterController::class, 'register']);
