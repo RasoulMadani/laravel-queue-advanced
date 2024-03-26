@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendVerificationEmailJob;
 use App\Mail\SendVerificationEmail;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -18,8 +19,8 @@ class RegisterController extends Controller
         ];
 
         $user = User::create($validatedData);
-
-        Mail::to($user)->send(new SendVerificationEmail($user));
+        SendVerificationEmailJob::dispatch($user);
+        
 
         return response()->json([
             'status' => 'success'

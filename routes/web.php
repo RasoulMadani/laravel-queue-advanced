@@ -21,4 +21,4 @@ Route::get('/', function () {
 });
 
 
-Route::post('register', [RegisterController::class, 'register']);
+Route::get('register', [RegisterController::class, 'register']);

@@ -12,3 +12,7 @@ php artisan queue:work
 php artisan make:controller RegisterController
 
 php artisan make:mail SendVerificationEmail
+
+php artisan make:job SendVerificationEmailJob
+
+php artisan queue:work
