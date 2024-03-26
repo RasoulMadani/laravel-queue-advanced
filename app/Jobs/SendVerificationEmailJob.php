@@ -20,7 +20,7 @@ class SendVerificationEmailJob implements ShouldQueue
      */
     public function __construct(public User $user)
     {
-        //
+        $this->onQueue('sending-notification');
     }
 
     /**

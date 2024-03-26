@@ -21,7 +21,7 @@ class RegisterController extends Controller
 
         // $user = User::create($validatedData);
         $user = User::whereEmail('hesam@gmail.com')->first();
-        SendVerificationEmailJob::dispatch($user)->onQueue('sending-notification');
+        SendVerificationEmailJob::dispatch($user);
         SendVerificationEmailJob::dispatch($user);
         
 
