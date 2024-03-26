@@ -17,6 +17,8 @@ class SendVerificationEmailJob implements ShouldQueue
 
     // تعداد دفعاتی که جاب اگر شکست خورد دوباره باید اجرا شود
     public $tries = 10;
+    // در اینجا می گوییم اگر جاب شکست خورد ۶۰ ثانیه صبر کند و بعد دوباره تلاش کند
+    public $backoff = 60;
 
     /**
      * Create a new job instance.
