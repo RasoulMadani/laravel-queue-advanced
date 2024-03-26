@@ -15,6 +15,9 @@ class SendVerificationEmailJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    // تعداد دفعاتی که جاب اگر شکست خورد دوباره باید اجرا شود
+    public $tries = 10;
+
     /**
      * Create a new job instance.
      */
